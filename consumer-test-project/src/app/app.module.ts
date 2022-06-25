@@ -15,9 +15,11 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NotesModule
   ],
-  providers: [NoteService],
+  providers: [{
+    provide: "NoteService",
+    useClass: NoteService
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

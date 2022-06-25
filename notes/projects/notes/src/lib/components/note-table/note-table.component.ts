@@ -13,12 +13,19 @@ export class NoteTableComponent implements OnInit {
   ) { }
 
   notes: Note[] = []
+  isLoading = false;
 
   ngOnInit(): void {
     this.getNotes();
   }
 
   getNotes() {
-    this.notes = this.noteService.getNotes();
+    this.isLoading = true;
+    this.noteService.getNotes().subscribe(notes => {
+      this.notes = notes;
+      this.isLoading = false;
+    }, err => {
+      
+    });
   }
 }

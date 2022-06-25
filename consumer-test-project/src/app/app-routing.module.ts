@@ -22,11 +22,5 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [
-    {
-      provide: "NoteService",
-      useClass: NoteService
-    }
-  ]
 })
 export class AppRoutingModule { }
