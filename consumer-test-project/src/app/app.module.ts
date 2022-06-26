@@ -1,7 +1,7 @@
+import { NoteTableComponent, NotesModule } from 'notes';
 import { NoteService } from './services/note.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NotesModule, NotesRoutingModule } from 'notes';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NotesModule,
   ],
   providers: [{
     provide: "NoteService",

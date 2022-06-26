@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { INoteService, Note } from "notes";
 import { Observable, of } from 'rxjs';
 
-enum MyApplicatioNoteTypes {
+export enum MyApplicationNoteTypes {
   Transactions = 1,
   Financings = 2,
 }
@@ -14,7 +14,7 @@ export class NoteService implements INoteService {
 
   constructor() { }
 
-  getNoteRouterLink(noteType: MyApplicatioNoteTypes, id: string | number): string[] {
+  getNoteRouterLink(noteType: MyApplicationNoteTypes, id: string | number): string[] {
     switch (noteType) {
       default: return ['/'];
     }

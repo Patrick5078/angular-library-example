@@ -7,13 +7,14 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    NoteTableComponent
+    NoteTableComponent,
   ],
   imports: [
     NotesRoutingModule,
-    CommonModule
+    CommonModule,
   ],
   exports: [
+    NoteTableComponent,
   ],
   providers: []
 })
